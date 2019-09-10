@@ -29,3 +29,11 @@ newton.o: newton.c newton.h
 clean:
 	rm -rf newton *.o
 
+# create install directory, make newton and copy newton in install
+install:
+	mkdir -p install
+	make newton
+	cp -f newton install
+
+# to be able to call install even if install directory is created
+.PHONY: install
