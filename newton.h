@@ -1,4 +1,4 @@
-
+//Commentaire de l'équipier deux
 
 /*
  * This is the function to call to obtain the Newton approximation.
