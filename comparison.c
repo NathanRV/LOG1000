@@ -1,4 +1,4 @@
-
+#include "comparison.h"
 #include "math.h"
 
 float comparison(float initial_value, float root){
