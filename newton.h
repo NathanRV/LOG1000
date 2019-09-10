@@ -1,4 +1,4 @@
-//Commentaire de l'équipier deux
+//Commetaire suite à la résolution du conflit
 
 /*
  * This is the function to call to obtain the Newton approximation.
