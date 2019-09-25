@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>410</y>
+      <w>460</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Patient
+--
+-Maladies: Vector&lt;String&gt;
+-NumAssuranceMaladie: String
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+
+/-ajouterCommentaire(Commentaire commentaire, Infirmier id)/
+/-supprimeCommentaire(Commentaire commentaire, Infirmier id)/
+--
+Responsibilities
+-- Resp1
+-- Resp2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>410</y>
+      <w>300</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>Infirmier
+--
++TauxHoraire: Double
++NumPermis: Int
++Commentaires: Vector&lt;Commentaire&gt;
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+
+/-refuserRdv(Rdv rdv)/
+/-accepterRdv(Rdv rdv)/
+/-donnerDispo(Date date, Heure heure)/
+--
+Responsibilities
+-- Resp1
+-- Resp2
+
+{innerclass
+Commentaire
+--
++Titre: String
++Texte: String
++Note: String
+-Auteur: Patient
+--
+/getAuteur()/
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>90</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Personne
+--
++identifiant: String
+-Prénom:string
+-Nom:string
+-Courriel:string
+-numTel:string
+-DDN:string
+-Numéro civique:int
+-Rue:string
+-Appt. : string
+-Ville:string
+-CodePostal:string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>290</y>
+      <w>300</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>280.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>290</y>
+      <w>170</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>660</y>
+      <w>290</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Rdv
+--
+-id: Long 
+-Date: String
+-Heure: 
+-Lieu: 
+-Raison: 
+-Statut: 
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+-- Resp2</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
