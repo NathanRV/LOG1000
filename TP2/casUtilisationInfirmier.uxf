@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>290</x>
-      <y>380</y>
-      <w>60</w>
-      <h>110</h>
+      <x>56</x>
+      <y>231</y>
+      <w>42</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>Patient</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>540</x>
-      <y>430</y>
-      <w>120</w>
-      <h>40</h>
+      <x>231</x>
+      <y>266</y>
+      <w>84</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>demandeRdv</panel_attributes>
     <additional_attributes/>
@@ -26,10 +26,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>400</x>
-      <y>330</y>
-      <w>170</w>
-      <h>40</h>
+      <x>133</x>
+      <y>196</y>
+      <w>119</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>consulterInfirmière</panel_attributes>
     <additional_attributes/>
@@ -37,10 +37,10 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>1000</x>
-      <y>430</y>
-      <w>80</w>
-      <h>110</h>
+      <x>553</x>
+      <y>266</y>
+      <w>56</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>Infirmière</panel_attributes>
     <additional_attributes/>
@@ -48,10 +48,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>350</y>
-      <w>80</w>
-      <h>60</h>
+      <x>91</x>
+      <y>210</y>
+      <w>56</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;40.0;60.0;10.0</additional_attributes>
@@ -59,10 +59,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>430</y>
-      <w>220</w>
-      <h>40</h>
+      <x>91</x>
+      <y>266</y>
+      <w>154</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
@@ -70,32 +70,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>810</x>
-      <y>280</y>
-      <w>130</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>déclarerDisponible</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>920</x>
-      <y>310</y>
-      <w>120</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;100.0;120.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>790</x>
-      <y>390</y>
-      <w>120</w>
-      <h>40</h>
+      <x>406</x>
+      <y>238</y>
+      <w>84</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>refuseRdv
 </panel_attributes>
@@ -104,10 +82,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>600</x>
-      <y>260</y>
-      <w>120</w>
-      <h>40</h>
+      <x>336</x>
+      <y>119</y>
+      <w>84</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>voirDisponibilites</panel_attributes>
     <additional_attributes/>
@@ -115,10 +93,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>770</x>
-      <y>500</y>
-      <w>120</w>
-      <h>40</h>
+      <x>392</x>
+      <y>315</y>
+      <w>84</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>accepteRdv</panel_attributes>
     <additional_attributes/>
@@ -126,10 +104,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>650</x>
-      <y>390</y>
-      <w>170</w>
-      <h>80</h>
+      <x>308</x>
+      <y>238</y>
+      <w>119</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
@@ -138,10 +116,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>400</y>
-      <w>130</w>
-      <h>70</h>
+      <x>483</x>
+      <y>245</y>
+      <w>91</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;10.0;110.0;50.0</additional_attributes>
@@ -149,10 +127,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>880</x>
-      <y>470</y>
-      <w>150</w>
-      <h>70</h>
+      <x>469</x>
+      <y>294</y>
+      <w>105</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;50.0;130.0;10.0</additional_attributes>
@@ -160,10 +138,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>610</x>
-      <y>460</y>
-      <w>190</w>
-      <h>70</h>
+      <x>280</x>
+      <y>287</y>
+      <w>133</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
@@ -172,10 +150,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
-      <y>360</y>
-      <w>130</w>
-      <h>90</h>
+      <x>231</x>
+      <y>217</y>
+      <w>91</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -184,25 +162,13 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>290</y>
-      <w>200</w>
-      <h>160</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>180.0;10.0;10.0;140.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>520</x>
-      <y>280</y>
-      <w>100</w>
-      <h>70</h>
+      <x>217</x>
+      <y>133</y>
+      <w>133</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;50.0;80.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;170.0;10.0</additional_attributes>
   </element>
 </diagram>
