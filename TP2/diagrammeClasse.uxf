@@ -18,10 +18,9 @@
 /+ajouterCommentaire(String titre,string texte,string note, Infirmier id):Commentaire/
 /+supprimeCommentaire(String titre,string texte,string note, Infirmier id):Commentaire/
 /+voirRdv():vector&lt;Rdv&gt;/
+/+getInfo():string/
 
 /-payerRdv(): Void/
-/-getInfo():string/
-
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -118,6 +117,7 @@ m2= 1..*</panel_attributes>
 -Patient: string
 --
 /+getInfo():string/
+/+voirPatient():Patient/
 
 
 </panel_attributes>
