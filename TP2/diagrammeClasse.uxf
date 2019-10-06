@@ -1,74 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>7</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>259</x>
-      <y>322</y>
-      <w>322</w>
-      <h>168</h>
+      <x>270</x>
+      <y>366</y>
+      <w>378</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>Patient
 --
 -Maladies: Vector&lt;String&gt;
 -NumAssuranceMaladie: String
+-RDV : vector &lt;Rdv&gt;
 --
-#Operation(i: int): int
-/+AbstractOperation()/
+/+ajouterCommentaire(String titre,string texte,string note, Infirmier id):Commentaire/
+/+supprimeCommentaire(String titre,string texte,string note, Infirmier id):Commentaire/
+/+voirRdv():vector&lt;Rdv&gt;/
 
-/-ajouterCommentaire(Commentaire commentaire, Infirmier id)/
-/-supprimeCommentaire(Commentaire commentaire, Infirmier id)/
---
-Responsibilities
--- Resp1
--- Resp2</panel_attributes>
+/-payerRdv(): Void/
+/-getInfo():string/
+
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>42</x>
-      <y>322</y>
-      <w>210</w>
-      <h>273</h>
+      <x>12</x>
+      <y>372</y>
+      <w>228</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>Infirmier
 --
 +TauxHoraire: Double
 +NumPermis: Int
 +Commentaires: Vector&lt;Commentaire&gt;
+-ListeRdv: Vector&lt;Rdv&gt;
 --
-#Operation(i: int): int
-/+AbstractOperation()/
-
-/-refuserRdv(Rdv rdv)/
-/-accepterRdv(Rdv rdv)/
-/-donnerDispo(Date date, Heure heure)/
---
-Responsibilities
--- Resp1
--- Resp2
-
-{innerclass
-Commentaire
---
-+Titre: String
-+Texte: String
-+Note: String
--Auteur: Patient
---
-/getAuteur()/
-innerclass}</panel_attributes>
+/+refuserRdv(Rdv rdv):void/
+/+accepterRdv(Rdv rdv):void/
+/+donnerDispo(Date date, Heure heure):void/
+/+getRdv(): Vector&lt;Rdv&gt;/
+/+finirRdv() : double/
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>252</x>
-      <y>98</y>
-      <w>147</w>
-      <h>147</h>
+      <x>240</x>
+      <y>180</y>
+      <w>126</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>Personne
 --
@@ -89,48 +75,211 @@ innerclass}</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>112</x>
-      <y>238</y>
-      <w>210</w>
-      <h>98</h>
+      <x>216</x>
+      <y>300</y>
+      <w>84</w>
+      <h>84</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>280.0;10.0;10.0;120.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-
+m1=*
+m2= 1..*</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>329</x>
-      <y>238</y>
-      <w>119</w>
-      <h>98</h>
+      <x>306</x>
+      <y>300</y>
+      <w>60</w>
+      <h>78</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;120.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-
+m1=*
+m2= 1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
-      <y>497</y>
-      <w>203</w>
-      <h>168</h>
+      <x>282</x>
+      <y>642</y>
+      <w>174</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>Rdv
 --
--id: Long 
++id: Long 
 -Date: String
--Heure: 
--Lieu: 
--Raison: 
--Statut: 
+-Heure: Double
+-Lieu: String
+-Raison: String
+-Statut: String
+-Infirmier: string
+-Patient: string
 --
-#Operation(i: int): int
-/+AbstractOperation()/
---
-Responsibilities
--- Resp1
--- Resp2</panel_attributes>
+/+getInfo():string/
+
+
+</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>636</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Commentaire
+--
++Titre: String
++Texte: String
++Note: String
+-Auteur: string
+--
+/+getAuteur():string/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>108</x>
+      <y>510</y>
+      <w>30</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=*</panel_attributes>
+    <additional_attributes>10.0;210.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>510</y>
+      <w>96</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=*</panel_attributes>
+    <additional_attributes>120.0;220.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>516</y>
+      <w>72</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=*
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;210.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>516</y>
+      <w>156</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+m2=1..*</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>192</y>
+      <w>252</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>CarteCredit
+--
+-Titulaire: string
+-NumeroCarte: double
+-DateExpiration: string
+-CVV: double
+--
+/-paiement(CompteCheque compte, double montant):void/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>486</x>
+      <y>264</y>
+      <w>30</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=*
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>216</y>
+      <w>126</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>CompteCheque
+--
+-NumSuccursale: double
+-NumeroInstitution: double
+-NumeroCompte: double
+-Titulaire: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>84</x>
+      <y>282</y>
+      <w>24</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>648</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>
+Facture
+--
++NumTPS: double
++NumTVQ: double
++Montant: double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>684</y>
+      <w>90</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;50.0;130.0;10.0</additional_attributes>
   </element>
 </diagram>
