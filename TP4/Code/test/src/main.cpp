@@ -12,10 +12,7 @@ int main( int argc, char **argv)
     // Va résenter les résultats sous forme textuelle.
     CppUnit::TextUi::TestRunner runner;
 
-    // La classe DiviseurTest contient des macros. 
-    // Ces macros définissent une suite de tests.
-    // Cela lui donne la méthode statique "suite" qui est appelée ici.
-    // Cette méthode statique retourne des pointeurs vers les méthodes de tests.
+    // Ajoute la suite de tests sur les rabais
     runner.addTest(RabaisTest::suite());
 
     // Exécute les tests et affiche les résultats.

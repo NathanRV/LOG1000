@@ -72,7 +72,7 @@ clean:
 test: $(TESTS)/$(BINAIRE)/$(EXECTEST)
 	./$(TESTS)/$(BINAIRE)/$(EXECTEST)
 
-$(TESTS)/$(BINAIRE)/$(EXECTEST): $(TESTS)/$(BINAIRE)/main.o $(TESTS)/$(BINAIRE)/rabais_test.o $(TESTS)/$(BINAIRE)/rabais.o
+$(TESTS)/$(BINAIRE)/$(EXECTEST): $(TESTS)/$(BINAIRE)/main.o $(TESTS)/$(BINAIRE)/rabais_test.o $(TESTS)/$(BINAIRE)/rabais.o $(TESTS)/$(BINAIRE)/facture.o $(TESTS)/$(BINAIRE)/client.o
 	g++ -o $@ $^ -lcppunit
 
 $(TESTS)/$(BINAIRE)/main.o: $(TESTS)/$(SOURCE)/main.cpp $(TESTS)/$(SOURCE)/rabais_test.h

@@ -16,7 +16,8 @@
 class RabaisTest : public CppUnit::TestFixture
 {
     CPPUNIT_TEST_SUITE(RabaisTest);
-    CPPUNIT_TEST(test_getRabais);
+    CPPUNIT_TEST(test_d1);
+    CPPUNIT_TEST(test_d2);
     CPPUNIT_TEST_SUITE_END();
     
 private:
@@ -28,5 +29,11 @@ public:
     void tearDown();
     
     // Fonctions de tests
-    void test_getRabais();
+    void test_d1();
+    void test_d2();
+
 };
+
+
+
+
