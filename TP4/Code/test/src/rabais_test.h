@@ -18,6 +18,11 @@ class RabaisTest : public CppUnit::TestFixture
     CPPUNIT_TEST_SUITE(RabaisTest);
     CPPUNIT_TEST(test_d1);
     CPPUNIT_TEST(test_d2);
+    CPPUNIT_TEST(test_d3);
+    CPPUNIT_TEST(test_d4);
+    CPPUNIT_TEST(test_d5);
+    CPPUNIT_TEST(test_d6);
+    CPPUNIT_TEST(test_d7);
     CPPUNIT_TEST_SUITE_END();
     
 private:
@@ -31,6 +36,11 @@ public:
     // Fonctions de tests
     void test_d1();
     void test_d2();
+    void test_d3();
+    void test_d4();
+    void test_d5();
+    void test_d6();
+    void test_d7();
 
 };
 

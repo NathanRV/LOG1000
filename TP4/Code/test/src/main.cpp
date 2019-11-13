@@ -6,7 +6,7 @@
 // Fichiers contenant les tests
 #include "rabais_test.h"
 
-int main( int argc, char **argv)
+int main(int argc, char **argv)
 {
     // Crée un objet pour exécuter les tests.
     // Va résenter les résultats sous forme textuelle.
