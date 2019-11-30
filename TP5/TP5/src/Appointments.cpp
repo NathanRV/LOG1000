@@ -6,19 +6,15 @@ Appointments::Appointments(std::string filePath) : _csvHandler(CSVHandler(filePa
     this->setData(this->_csvHandler.getData());
 }
 
-void Appointments::display(unsigned int userCol, std::string userId, std::vector<unsigned int> displayedColumns)
-{
-    std::vector<std::vector<std::string>> filteredAppointments;
-    unsigned int appointmentIdx = 1;
-
-    // 1. On remplit le vecteur displayedColumns par tous les indexes des colonnes du fichier CSV:
-    if (displayedColumns.empty())
-    {
+std::vector<unsigned int> Appointments::fillDisplayColumns(std::vector<unsigned int> displayedColumns){
+    if(displayedColumns.empty()){
         displayedColumns = std::vector<unsigned int>(this->_headers.size());
         std::iota(displayedColumns.begin(), displayedColumns.end(), 0);
     }
+    return displayedColumns;
+}
 
-    // 2. On affiche toutes les en-têtes des colonnes voulues du fichier CSV:
+void Appointments::displayHeaders(std::vector<unsigned int> displayedColumns){
     for (unsigned int col : displayedColumns)
     {
         std::cout << std::setw(this->_COLUMN_WIDTH)
@@ -27,8 +23,9 @@ void Appointments::display(unsigned int userCol, std::string userId, std::vector
     std::cout << std::endl
               << std::string(displayedColumns.size() * this->_COLUMN_WIDTH, '_')
               << std::endl;
+}
 
-    // 3. On filtre les rendez-vous pour ne conserver ceux de l'utilisateur passé en paramètre (soit un infirmier ou un patient):
+std::vector<std::vector<std::string>> Appointments::filterAppointments(unsigned int userCol, std::string userId, std::vector<std::vector<std::string>> filteredAppointments){
     std::copy_if(
         this->getData()->begin(),
         this->getData()->end(),
@@ -36,8 +33,10 @@ void Appointments::display(unsigned int userCol, std::string userId, std::vector
             [userId, userCol](std::vector<std::string> appointment) {
                 return appointment[userCol] == userId;
             });
+    return filteredAppointments;
+}
 
-    // 4. On affiche ensuite les rendez-vous filtrés à l'écran:
+void Appointments::displayAppointments(std::vector<std::vector<std::string>> filteredAppointments, unsigned int appointmentIdx, std::vector<unsigned int> displayedColumns){
     for (std::vector<std::string> filteredAppointment : filteredAppointments)
     {
         std::cout << appointmentIdx++
@@ -52,6 +51,17 @@ void Appointments::display(unsigned int userCol, std::string userId, std::vector
 
         std::cout << '\n';
     }
+}
+
+void Appointments::display(unsigned int userCol, std::string userId, std::vector<unsigned int> displayedColumns)
+{
+    std::vector<std::vector<std::string>> filteredAppointments;
+    unsigned int appointmentIdx = 1;
+
+    displayedColumns=fillDisplayColumns(displayedColumns);
+    displayHeaders(displayedColumns);
+    filteredAppointments=filterAppointments(userCol, userId, filteredAppointments);
+    displayAppointments(filteredAppointments, appointmentIdx, displayedColumns);    
 }
 
 bool Appointments::schedule(std::string patientId, std::string nurseId)
