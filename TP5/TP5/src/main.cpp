@@ -28,7 +28,6 @@ Patient *login()
 
 int main(int argc, char **argv)
 {
-    int choice = 0;
     Patient *loggedInUser = login();
     Nurses nurses(NURSES_CSV_PATH);
     Appointments appointments(APPOINTMENTS_CSV_PATH);
@@ -37,7 +36,9 @@ int main(int argc, char **argv)
     std::cout << "\n\n\e[1mBonjour " << loggedInUser->firstName << ' '
               << loggedInUser->lastName << "!\e[0m\n\n";
 
-    do
+
+    int choice = 1;
+    while(choice!=0)
     {
         std::cout << "Voici la liste des infirmières:\n\n";
         nurses.display();
@@ -112,7 +113,7 @@ int main(int argc, char **argv)
             break;
         }
         }
-    } while (choice != 0);
+    }
 
     // ICi noUs aLloNs dÉSaLoUEr loGgeDInUSeR
     delete loggedInUser;
