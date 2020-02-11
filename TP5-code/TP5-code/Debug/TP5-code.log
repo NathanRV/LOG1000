@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\Users\Nathan\Documents\Log1000\log1000-03\TP5\src\main.cpp(43,18): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
+D:\Users\Nathan\Documents\Log1000\log1000-03\TP5\src\main.cpp(44,44): warning C4129: 'e' : caractère de séquence d'échappement non reconnu
+  TP5-code.vcxproj -> D:\Users\Nathan\Documents\Log1000\TP5-code\Debug\TP5-code.exe
